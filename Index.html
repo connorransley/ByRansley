@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>By Ransley — Webinar</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Barlow:wght@800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black:  #080808;
+    --gold:   #B8962E;
+    --gold-h: #CFA83C;
+    --white:  #FFFFFF;
+    --dim:    #555;
+    --border: #1e1e1e;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 28px;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .brand {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 48px;
+    display: block;
+  }
+
+  .form-title {
+    font-family: 'Barlow', sans-serif;
+    font-size: clamp(52px, 8vw, 80px);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+  }
+
+  .form-date {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+  }
+
+  .form-sub {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .form-desc {
+    font-size: 14px;
+    color: var(--dim);
+    line-height: 1.75;
+    margin-bottom: 48px;
+  }
+
+  .field { margin-bottom: 32px; }
+
+  .field label {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--dim);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .field input,
+  .field textarea {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 0 14px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    transition: border-color 0.2s;
+    caret-color: var(--gold);
+  }
+
+  .field input:focus,
+  .field textarea:focus { border-bottom-color: var(--gold); }
+
+  .field input::placeholder,
+  .field textarea::placeholder { color: #2a2a2a; }
+
+  .field textarea { resize: none; height: 90px; line-height: 1.65; }
+
+  .err { font-size: 11px; color: #e74c3c; margin-top: 5px; display: none; }
+  .err.on { display: block; }
+
+  .submit-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+
+  .submit-btn {
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 18px 40px;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+
+  .submit-btn:hover { background: var(--gold-h); }
+  .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .privacy { font-size: 11px; color: #282828; line-height: 1.6; }
+
+  .status-msg { margin-top: 16px; font-size: 13px; font-weight: 500; display: none; }
+  .status-msg.sending { display: block; color: var(--dim); }
+  .status-msg.error   { display: block; color: #e74c3c; }
+
+  /* ── THANK YOU ─────────────────────────── */
+  #thanksPage {
+    display: none;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 32px;
+  }
+
+  #thanksPage.on { display: flex; }
+
+  .thanks-ring {
+    width: 54px; height: 54px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); font-size: 22px;
+    margin-bottom: 36px;
+  }
+
+  .thanks-title {
+    font-family: 'Barlow', sans-serif;
+    font-size: clamp(56px, 8vw, 96px);
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 0.9;
+    margin-bottom: 18px;
+  }
+
+  .thanks-sub {
+    font-size: 14px;
+    color: var(--dim);
+    line-height: 1.75;
+    max-width: 320px;
+    margin-bottom: 44px;
+  }
+
+  .back-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--dim);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 13px 26px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .back-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* ── ADMIN ──────────────────────────────── */
+  #adminPage {
+    display: none;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 52px 40px;
+  }
+  #adminPage.on { display: flex; }
+
+  .admin-top { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 44px; flex-wrap: wrap; gap: 16px; }
+  .admin-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 4px; color: var(--dim); text-transform: uppercase; margin-bottom: 6px; }
+  .admin-count { font-family: 'Barlow', sans-serif; font-size: 52px; font-weight: 900; letter-spacing: -2px; line-height: 1; }
+  .admin-count span { font-size: 15px; font-weight: 400; color: var(--dim); letter-spacing: 0; margin-left: 8px; font-family: 'DM Sans', sans-serif; }
+  .admin-btns { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+
+  .btn-gold { background: var(--gold); color: var(--black); border: none; font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; padding: 12px 20px; cursor: pointer; }
+  .btn-gold:hover { background: var(--gold-h); }
+  .btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--dim); font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; cursor: pointer; }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+  .btn-danger { background: transparent; border: 1px solid var(--border); color: var(--dim); font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; cursor: pointer; }
+  .btn-danger:hover { border-color: #e74c3c; color: #e74c3c; }
+
+  .tbl-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; padding: 11px 18px; font-size: 9px; font-weight: 500; letter-spacing: 3px; color: var(--dim); text-transform: uppercase; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 18px; border-bottom: 1px solid #0d0d0d; color: #888; vertical-align: top; line-height: 1.5; }
+  td.n  { color: #252525; font-size: 12px; width: 36px; }
+  td.nm { color: var(--white); font-weight: 500; white-space: nowrap; }
+  td.em { color: #aaa; white-space: nowrap; }
+  td.q  { max-width: 420px; }
+  td.dt { white-space: nowrap; font-size: 12px; color: #333; }
+  tr:hover td { background: #0b0b0b; }
+
+  .empty { padding: 90px 24px; text-align: center; border-top: 1px solid var(--border); }
+  .empty-h { font-family: 'Barlow', sans-serif; font-size: 36px; font-weight: 900; color: #161616; letter-spacing: -1px; margin-bottom: 10px; }
+  .empty-s { font-size: 13px; color: #222; }
+
+  #adminBtn {
+    position: fixed; bottom: 22px; right: 24px;
+    background: transparent; border: 1px solid #131313; color: #1c1c1c;
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 500;
+    letter-spacing: 2px; text-transform: uppercase; padding: 9px 14px;
+    cursor: pointer; transition: all 0.2s; z-index: 99;
+  }
+  #adminBtn:hover { border-color: var(--gold); color: var(--gold); }
+</style>
+</head>
+<body>
+
+<!-- FORM -->
+<div id="formPage">
+  <div class="wrap">
+    <span class="brand">By Ransley — Free Webinar</span>
+
+    <h1 class="form-title">My journey.</h1>
+    <p class="form-date">Monday 3 March — 7:00pm to 8:00pm NZST</p>
+    <p class="form-sub">From working in construction to leaving my 6 figure job in marketing to chase my dream — this is my story.</p>
+    <p class="form-desc">Drop your details and tell me what you actually want to know. I'll build the session around your real questions.</p>
+
+    <div class="field">
+      <label for="f-name">Your name</label>
+      <input type="text" id="f-name" placeholder="First name" autocomplete="given-name">
+      <div class="err" id="e-name">Please enter your name.</div>
+    </div>
+
+    <div class="field">
+      <label for="f-email">Email address</label>
+      <input type="email" id="f-email" placeholder="you@email.com" autocomplete="email">
+      <div class="err" id="e-email">Please enter a valid email.</div>
+    </div>
+
+    <div class="field">
+      <label for="f-q">Your biggest question</label>
+      <textarea id="f-q" placeholder="What do you most want to know about building a personal brand?"></textarea>
+      <div class="err" id="e-q">Tell me what you want to know.</div>
+    </div>
+
+    <div class="submit-row">
+      <button class="submit-btn" id="submitBtn" onclick="handleSubmit()">Count me in</button>
+      <p class="privacy">No spam.<br>Just the webinar and the good stuff.</p>
+    </div>
+    <div class="status-msg" id="statusMsg"></div>
+  </div>
+</div>
+
+<!-- THANK YOU -->
+<div id="thanksPage">
+  <div class="thanks-ring">✓</div>
+  <h2 class="thanks-title">You're in.</h2>
+  <p class="thanks-sub">I'll send everything you need before the webinar. Keep an eye on your inbox.</p>
+  <button class="back-btn" onclick="showForm()">← Sign up another person</button>
+</div>
+
+<!-- ADMIN -->
+<div id="adminPage">
+  <div class="admin-top">
+    <div>
+      <div class="admin-eyebrow">Webinar registrations</div>
+      <div class="admin-count" id="countEl">0<span>sign-ups</span></div>
+    </div>
+    <div class="admin-btns">
+      <button class="btn-gold" onclick="exportCSV()">Export CSV</button>
+      <button class="btn-ghost" onclick="closeAdmin()">← Back</button>
+      <button class="btn-danger" onclick="clearLocal()">Clear cache</button>
+    </div>
+  </div>
+  <div id="tblArea"></div>
+</div>
+
+<button id="adminBtn" onclick="openAdmin()">View sign-ups</button>
+
+<script>
+  const AT_TOKEN = 'patcleuNaz0R0TcAc.59944c651106bbd8f71f663df5f9296aa893c6b384f065a3d15779f771ccae5a';
+  const AT_BASE  = 'appF5N4ni1bA0w1YG';
+  const AT_TABLE = 'Webinar Signups';
+  const AT_URL   = `https://api.airtable.com/v0/${AT_BASE}/${encodeURIComponent(AT_TABLE)}`;
+
+  const LS_KEY = 'br_signups';
+  const local  = {
+    get:  () => { try { return JSON.parse(localStorage.getItem(LS_KEY)||'[]'); } catch { return []; } },
+    save: d  => localStorage.setItem(LS_KEY, JSON.stringify(d))
+  };
+
+  async function handleSubmit() {
+    const name  = document.getElementById('f-name').value.trim();
+    const email = document.getElementById('f-email').value.trim();
+    const q     = document.getElementById('f-q').value.trim();
+    let ok = true;
+
+    if (!name)  { show('e-name',  true);  ok = false; } else show('e-name',  false);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { show('e-email', true); ok = false; } else show('e-email', false);
+    if (!q)     { show('e-q',     true);  ok = false; } else show('e-q',     false);
+    if (!ok) return;
+
+    const btn = document.getElementById('submitBtn');
+    const msg = document.getElementById('statusMsg');
+    btn.disabled = true;
+    msg.className = 'status-msg sending';
+    msg.textContent = 'Sending...';
+
+    const dateStr = new Date().toLocaleDateString('en-NZ', { day:'numeric', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' });
+
+    const list = local.get();
+    list.push({ name, email, question: q, date: dateStr });
+    local.save(list);
+
+    try {
+      const res = await fetch(AT_URL, {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${AT_TOKEN}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ records: [{ fields: { Name: name, Email: email, Question: q, 'Signed Up': dateStr } }] })
+      });
+      if (!res.ok) { const e = await res.json(); throw new Error(e?.error?.message || 'Airtable error'); }
+      document.getElementById('formPage').style.display = 'none';
+      document.getElementById('adminBtn').style.display = 'none';
+      document.getElementById('thanksPage').classList.add('on');
+    } catch (err) {
+      msg.className = 'status-msg error';
+      msg.textContent = `Saved locally — couldn't reach Airtable: ${err.message}`;
+      btn.disabled = false;
+    }
+  }
+
+  function show(id, on) { document.getElementById(id).classList.toggle('on', on); }
+
+  function showForm() {
+    ['f-name','f-email','f-q'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('statusMsg').className = 'status-msg';
+    document.getElementById('submitBtn').disabled = false;
+    document.getElementById('thanksPage').classList.remove('on');
+    document.getElementById('formPage').style.display = 'flex';
+    document.getElementById('adminBtn').style.display = 'block';
+  }
+
+  function openAdmin() {
+    document.getElementById('formPage').style.display = 'none';
+    document.getElementById('thanksPage').classList.remove('on');
+    document.getElementById('adminPage').classList.add('on');
+    document.getElementById('adminBtn').style.display = 'none';
+    renderTable();
+  }
+
+  function closeAdmin() {
+    document.getElementById('adminPage').classList.remove('on');
+    document.getElementById('formPage').style.display = 'flex';
+    document.getElementById('adminBtn').style.display = 'block';
+  }
+
+  function renderTable() {
+    const list = local.get();
+    document.getElementById('countEl').innerHTML = `${list.length}<span>sign-up${list.length !== 1 ? 's' : ''} (local cache)</span>`;
+    const area = document.getElementById('tblArea');
+    if (!list.length) {
+      area.innerHTML = `<div class="empty"><div class="empty-h">No local entries.</div><div class="empty-s">Submissions go directly to your Airtable.</div></div>`;
+      return;
+    }
+    const rows = [...list].reverse().map((s,i) => `
+      <tr>
+        <td class="n">${list.length-i}</td>
+        <td class="nm">${esc(s.name)}</td>
+        <td class="em">${esc(s.email)}</td>
+        <td class="q">${esc(s.question)}</td>
+        <td class="dt">${esc(s.date)}</td>
+      </tr>`).join('');
+    area.innerHTML = `<div class="tbl-wrap"><table><thead><tr><th>#</th><th>Name</th><th>Email</th><th>Question</th><th>Date</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  }
+
+  function exportCSV() {
+    const list = local.get();
+    if (!list.length) return alert('No local entries. Check your Airtable.');
+    const csv = ['#,Name,Email,Question,Date', ...list.map((s,i) => `${i+1},"${esc2(s.name)}","${esc2(s.email)}","${esc2(s.question)}","${esc2(s.date)}"`)].join('\n');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv'}));
+    a.download = `byransley-signups-${new Date().toISOString().slice(0,10)}.csv`;
+    a.click();
+  }
+
+  function clearLocal() {
+    if (!confirm('Clear local cache? Airtable data is unaffected.')) return;
+    local.save([]); renderTable();
+  }
+
+  const esc  = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const esc2 = s => String(s).replace(/"/g,'""');
+</script>
+</body>
+</html>
