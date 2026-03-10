@@ -1,0 +1,2128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connor Ransley | Personal Brand, Organic Social Media & Viral Content</title>
+  <meta name="description" content="Struggling with what to post, how to show up, or stuck in 200-view jail? Connor Ransley helps founders and teams with personal brand, organic social media, and viral content. Remote, worldwide.">
+  <meta name="keywords" content="personal brand, organic social media, viral content, social media strategy, content strategy, Connor Ransley, Auckland">
+  <link rel="canonical" href="https://www.byransley.com">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.byransley.com">
+  <meta property="og:title" content="Connor Ransley | Personal Brand & Organic Social Media">
+  <meta property="og:description" content="Struggling with what to post, how to show up, or stuck in 200-view jail? I help with personal brand, organic social media, and viral content. Remote, worldwide.">
+  <meta property="og:image" content="https://www.byransley.com/photos/hero.jpg">
+  <meta property="og:locale" content="en_NZ">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Connor Ransley | Personal Brand & Organic Social Media">
+  <meta name="twitter:description" content="Struggling with what to post or stuck in 200-view jail? I help with personal brand, organic social media, and viral content. Remote, worldwide.">
+  <meta name="twitter:image" content="https://www.byransley.com/photos/hero.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black:       #000000;
+      --dark:        #0d0d0d;
+      --white:       #ffffff;
+      --gold:        #C9A227;
+      --gold-hover:  #d4af37;
+      --grey-dark:   #111111;
+      --grey-mid:    #1c1c1c;
+      --grey-border: #222222;
+      --grey-text:   #888888;
+      --t:           0.25s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── UTILITY ──────────────────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    .section-label {
+      display: inline-block;
+      border-left: 2px solid var(--gold);
+      padding-left: 0.7rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .photo-box {
+      background: var(--grey-mid);
+      border: 1px solid var(--grey-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.8125rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--black);
+      background: var(--gold);
+      border: none;
+      padding: 0.75rem 1.75rem;
+      cursor: pointer;
+      transition: background var(--t), transform var(--t);
+      white-space: nowrap;
+    }
+    .btn:hover { background: var(--gold-hover); transform: translateY(-1px); }
+    .btn-lg { padding: 0.75rem 1.75rem; font-size: 0.8125rem; }
+
+    .body-copy p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--grey-text);
+    }
+    .body-copy p + p { margin-top: 1.4rem; }
+
+    /* ─── FLOATING CTA ─────────────────────────────────────── */
+    .fab {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--black);
+      background: var(--gold);
+      padding: 0.75rem 1.75rem;
+      box-shadow: 0 4px 20px rgba(201,162,39,0.25);
+      transition: background var(--t), transform var(--t), box-shadow var(--t);
+    }
+    .fab:hover { background: var(--gold-hover); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(201,162,39,0.45); }
+
+    /* ─── NAV ──────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 200;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      background: rgba(0,0,0,0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--grey-border);
+      padding: 0 2.5rem;
+    }
+    .nav-inner {
+      width: 100%;
+      max-width: 1380px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+    .nav-logo {
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .nav-email {
+      justify-self: end;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: var(--grey-text);
+      text-decoration: none;
+      transition: color var(--t);
+    }
+    .nav-email:hover { color: var(--white); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.1rem;
+      list-style: none;
+    }
+    .nav-links a {
+      display: block;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-text);
+      text-decoration: none;
+      transition: color var(--t);
+    }
+    .nav-links a:hover { color: var(--white); }
+    .ham {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      justify-self: end;
+    }
+    .ham span { display: block; width: 22px; height: 2px; background: var(--white); transition: transform var(--t), opacity var(--t); }
+    .ham.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .ham.open span:nth-child(2) { opacity: 0; }
+    .ham.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 62px 0 0;
+      z-index: 199;
+      background: var(--black);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+      transition: color var(--t);
+    }
+    .mobile-nav a:hover { color: var(--gold); }
+
+    /* ─── SECTION 1: HERO ──────────────────────────────────── */
+    .hero {
+      min-height: 100svh;
+      padding-top: 62px;
+      background: var(--black);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: 1px solid var(--grey-border);
+    }
+    .hero-inner {
+      max-width: 1380px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .hero-text {
+      max-width: 600px;
+    }
+    .hero-h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      text-transform: uppercase;
+      line-height: 0.97;
+      margin-bottom: 1.5rem;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 1.35vw, 1.15rem);
+      color: var(--grey-text);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .hero-credential {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--grey-text);
+      opacity: 0.6;
+      letter-spacing: 0.04em;
+      margin-bottom: 2rem;
+    }
+    .hero-cta {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.5rem 1.25rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      background: transparent;
+      transition: color var(--t), background var(--t);
+    }
+    .hero-cta:hover { background: var(--gold); color: var(--black); }
+    .hero-photo-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3/4;
+      max-height: 540px;
+      overflow: hidden;
+      border: 1px solid var(--grey-border);
+    }
+    .hero-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 37%;
+      display: block;
+    }
+    .hero-photo-placeholder {
+      position: absolute;
+      inset: 0;
+      background: var(--grey-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* ─── STATS ROW (single line under hero) ─────────────────── */
+    .stats-row {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-bottom: 1px solid var(--grey-border);
+      background: var(--black);
+    }
+    .stats-row .stat-item {
+      text-align: center;
+      padding: 1rem 1.5rem;
+      border-right: 1px solid var(--grey-border);
+    }
+    .stats-row .stat-item:last-child { border-right: none; }
+    .stats-row .stat-num {
+      font-size: clamp(1.35rem, 2.25vw, 1.75rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 0.35rem;
+    }
+    .stats-row .stat-lbl {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--grey-text);
+      line-height: 1.4;
+    }
+
+    /* ─── SECTION 2: PULL QUOTE ────────────────────────────── */
+    .pull-quote {
+      background: var(--dark);
+      padding: 9rem 2.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--grey-border);
+    }
+    .pull-quote-text {
+      font-size: clamp(1.85rem, 4vw, 3.5rem);
+      font-weight: 700;
+      font-style: italic;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      color: var(--white);
+      max-width: 860px;
+      margin: 0 auto 1.5rem;
+    }
+    .pull-quote-attr {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── SECTION 3: THE PROBLEM ───────────────────────────── */
+    .problem {
+      background: var(--black);
+      padding: 8rem 2.5rem;
+      border-bottom: 1px solid var(--grey-border);
+    }
+    .problem-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8rem;
+      align-items: start;
+    }
+    .problem-h2 {
+      font-size: clamp(2.25rem, 3.75vw, 3.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+    }
+
+    /* ─── SECTION 4: BRANDS (brand wall) ───────────────────── */
+    .brands {
+      background: var(--dark);
+      border-bottom: 1px solid var(--grey-border);
+      overflow: hidden;
+      padding: 5rem 2.5rem 4rem;
+    }
+    .brands-header {
+      max-width: 1380px;
+      margin: 0 auto 3rem;
+      padding: 0 2.5rem;
+    }
+    .brands-h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .brands-label {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 2.5rem 2rem;
+    }
+    .marquee-track {
+      display: flex;
+      overflow: hidden;
+      padding-bottom: 3.5rem;
+    }
+    .marquee-set {
+      display: flex;
+      flex-shrink: 0;
+      animation: marquee 30s linear infinite;
+    }
+    .marquee-item {
+      white-space: nowrap;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--grey-text);
+      padding: 0 1.5rem;
+      transition: color var(--t);
+      cursor: default;
+    }
+    .marquee-item:hover { color: var(--white); }
+    .marquee-sep {
+      color: var(--gold);
+      font-size: 0.72rem;
+      flex-shrink: 0;
+      align-self: center;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-100%); }
+    }
+
+    /* ─── SECTION 5: MY STORY (TIMELINE) ───────────────────── */
+    .timeline-section {
+      background: var(--black);
+      padding: 8rem 2.5rem;
+      border-bottom: 1px solid var(--grey-border);
+    }
+    .timeline-header {
+      max-width: 1380px;
+      margin: 0 auto 5rem;
+    }
+    .timeline-h2 {
+      font-size: clamp(2.25rem, 3.75vw, 3.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      max-width: 760px;
+    }
+    .timeline-wrap {
+      max-width: 1380px;
+      margin: 0 auto;
+    }
+    .timeline {
+      max-width: 100%;
+      margin: 0;
+      position: relative;
+      padding-left: 3.5rem;
+      padding-right: 12%;
+    }
+    .tl-photo {
+      width: 160px;
+      flex-shrink: 0;
+      aspect-ratio: 3/4;
+      background: var(--grey-mid);
+      border: 1px solid var(--grey-border);
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    .tl-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    @media (max-width: 760px) {
+      .tl-entry { flex-direction: column; }
+      .tl-photo { width: 100%; aspect-ratio: 4/3; }
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+    }
+    .tl-entry {
+      position: relative;
+      padding-bottom: 5.5rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .tl-entry:last-of-type { padding-bottom: 0; }
+    .tl-content { max-width: 520px; }
+    .tl-entry:nth-child(1) .tl-photo  { transform: rotate(-3deg); }
+    .tl-entry:nth-child(2) .tl-photo  { transform: rotate(2.5deg); }
+    .tl-entry:nth-child(2) .tl-photo img { object-position: center bottom; }
+    .tl-entry:nth-child(3) .tl-photo  { transform: rotate(-4deg); }
+    .tl-entry:nth-child(4) .tl-photo  { transform: rotate(3deg); width: 190px; }
+    .tl-entry:nth-child(5) .tl-photo  { transform: rotate(-2deg); }
+    .tl-entry:nth-child(6) .tl-photo  { transform: rotate(4deg); width: 210px; }
+    .tl-entry:nth-child(7) .tl-photo  { transform: rotate(-3.5deg); }
+    .tl-entry:nth-child(8) .tl-photo  { transform: rotate(2deg); width: 185px; }
+    .tl-entry:nth-child(9) .tl-photo  { transform: rotate(-4deg); width: 175px; }
+    .tl-entry:nth-child(10) .tl-photo { transform: rotate(3.5deg); }
+    .tl-dot {
+      position: absolute;
+      left: -3.5rem;
+      top: 0.35rem;
+      width: 9px;
+      height: 9px;
+      background: var(--gold);
+      border-radius: 50%;
+      transform: translateX(-4px);
+    }
+    .tl-year {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+    .tl-text {
+      font-size: 1.02rem;
+      line-height: 1.78;
+      color: var(--grey-text);
+    }
+    .tl-entry .tl-list {
+      list-style: none;
+      margin-top: 1rem;
+      padding-left: 0;
+    }
+    .tl-entry .tl-list li {
+      position: relative;
+      padding-left: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--grey-text);
+    }
+    .tl-entry .tl-list li::before {
+      content: '•';
+      color: var(--gold);
+      position: absolute;
+      left: 0;
+    }
+    .timeline-pull {
+      max-width: 820px;
+      margin: 4rem auto 0;
+      padding-left: 1.5rem;
+      border-left: 2px solid var(--gold);
+    }
+    .timeline-pull-wrap { max-width: 1380px; margin: 4rem auto 0; padding: 0 2.5rem; }
+    @media (max-width: 1420px) { .timeline { margin-left: 0; } }
+    .timeline-pull p {
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-style: italic;
+      color: var(--gold);
+      line-height: 1.55;
+    }
+
+    /* ─── SECTION 6: CASE STUDY ────────────────────────────── */
+    .case-study {
+      background: var(--dark);
+      padding: 8rem 2.5rem;
+      border-bottom: 1px solid var(--grey-border);
+    }
+    .case-study-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+    }
+    .case-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+      margin-bottom: 6rem;
+    }
+    .case-block:last-of-type { margin-bottom: 0; }
+    .case-h2 {
+      font-size: clamp(2.25rem, 3.5vw, 3.25rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      margin-bottom: 2rem;
+    }
+    .case-h3 {
+      font-size: clamp(1.35rem, 2vw, 1.6rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+      color: var(--white);
+    }
+    .case-coming {
+      font-size: 0.8rem;
+      color: var(--grey-text);
+      font-style: italic;
+      margin-top: 1rem;
+    }
+    .case-stats-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+    }
+    .case-placeholder-text {
+      font-size: 0.85rem;
+      color: var(--grey-text);
+      margin: 0;
+    }
+    .case-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,162,39,0.4);
+      padding-bottom: 0.2rem;
+      margin-top: 2.5rem;
+      transition: opacity var(--t);
+    }
+    .case-link:hover { opacity: 0.7; }
+    .case-stats-card {
+      background: var(--grey-dark);
+      border: 1px solid var(--grey-border);
+      padding: 3rem;
+    }
+    .case-stat-row {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--grey-border);
+    }
+    .case-stat-row:first-child { padding-top: 0; }
+    .case-stat-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .case-stat-num {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+    .case-stat-lbl {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── LIVE PROOF / ANALYTICS ───────────────────────────── */
+    .live-proof {
+      background: var(--dark);
+      padding: 8rem 2.5rem;
+      border-bottom: 1px solid var(--grey-border);
+    }
+    .live-proof-inner { max-width: 1380px; margin: 0 auto; }
+    .live-proof-header { margin-bottom: 4rem; }
+    .lp-h2 {
+      font-size: clamp(2.25rem, 3.75vw, 3.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+    .lp-sub { font-size: 1rem; color: var(--grey-text); line-height: 1.6; }
+    .analytics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .analytics-card {
+      background: #111111;
+      border-top: 3px solid var(--gold);
+      padding: 2.5rem;
+    }
+    .card-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+    .card-platform {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--grey-text);
+    }
+    .card-badge {
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      background: rgba(201,162,39,0.1);
+      border: 1px solid rgba(201,162,39,0.3);
+      padding: 0.2rem 0.6rem;
+    }
+    .card-big-num {
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--gold);
+      margin-bottom: 0.35rem;
+    }
+    .card-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey-text);
+      margin-bottom: 1.25rem;
+    }
+    .card-follower-line {
+      font-size: 0.82rem;
+      color: var(--grey-text);
+      margin-bottom: 1.5rem;
+    }
+    .card-follower-line strong { color: var(--white); font-weight: 600; }
+    .sparkline {
+      display: flex;
+      align-items: flex-end;
+      gap: 5px;
+      height: 36px;
+      margin-bottom: 1.5rem;
+    }
+    .sparkline-bar {
+      flex: 1;
+      background: rgba(201,162,39,0.22);
+      border-radius: 1px;
+      min-height: 3px;
+    }
+    .sparkline-bar.peak { background: var(--gold); }
+    .card-link {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--grey-text);
+      text-decoration: none;
+      transition: color var(--t);
+    }
+    .card-link:hover { color: var(--gold); }
+    .combined-bar {
+      background: #0d0d0d;
+      border: 1px solid var(--grey-border);
+      padding: 3rem 4rem;
+      text-align: center;
+    }
+    .combined-bar-text {
+      font-size: clamp(1rem, 2vw, 1.4rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .combined-num { color: var(--gold); }
+    .combined-bar-sub { font-size: 0.7rem; color: var(--grey-text); letter-spacing: 0.1em; }
+    @media (max-width: 760px) {
+      .analytics-grid { grid-template-columns: 1fr; }
+      .combined-bar { padding: 2rem 1.5rem; }
+    }
+
+    /* ─── SECTION 7: HOW IT WORKS ──────────────────────────── */
+    .how {
+      background: #09080200;
+      background: linear-gradient(135deg, #0d0b02 0%, #0a0a0a 60%);
+      padding: 8rem 2.5rem;
+      border-top: 1px solid rgba(201,162,39,0.25);
+      border-bottom: 1px solid rgba(201,162,39,0.25);
+    }
+    .how-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      border: 2px solid var(--gold);
+      padding: 4rem;
+      box-shadow: 0 0 60px rgba(201,162,39,0.14), inset 0 0 80px rgba(201,162,39,0.04);
+    }
+    @media (max-width: 760px) { .how-inner { padding: 2rem; } }
+    .how-h2 {
+      font-size: clamp(2.25rem, 3.75vw, 3.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      margin-bottom: 5rem;
+    }
+    .offer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    .offer-card {
+      background: #111;
+      border-top: 3px solid var(--gold);
+      border-right: 1px solid rgba(201,162,39,0.2);
+      border-bottom: 1px solid rgba(201,162,39,0.2);
+      border-left: 1px solid rgba(201,162,39,0.2);
+      padding: 3.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .offer-num {
+      font-size: clamp(4.5rem, 8vw, 7rem);
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .offer-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.3;
+      margin-bottom: 2rem;
+    }
+    .how-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .how-title {
+      font-size: clamp(1.35rem, 2.25vw, 1.9rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .how-body {
+      font-size: 1rem;
+      line-height: 1.82;
+      color: var(--grey-text);
+      margin-bottom: 1.75rem;
+      flex: 1;
+    }
+    .how-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin-bottom: 2.5rem;
+    }
+    .how-bullets li {
+      position: relative;
+      padding-left: 1.2rem;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: var(--grey-text);
+    }
+    .how-bullets li::before { content: '•'; color: var(--gold); position: absolute; left: 0; }
+    .how-cta {
+      display: flex;
+      justify-content: center;
+      padding-top: 1rem;
+    }
+    @media (max-width: 860px) {
+      .offer-grid { grid-template-columns: 1fr; }
+      .offer-card { padding: 2.5rem; }
+    }
+
+    /* ─── SECTION 8: SOCIAL PROOF ──────────────────────────── */
+    .proof {
+      background: var(--dark);
+      padding: 8rem 2.5rem;
+      border-bottom: 1px solid var(--grey-border);
+    }
+    .proof-inner { max-width: 1380px; margin: 0 auto; }
+    .proof-h2 {
+      font-size: clamp(2.25rem, 3.75vw, 3.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      margin-bottom: 1rem;
+    }
+    .proof-intro {
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--grey-text);
+      max-width: 640px;
+      margin-bottom: 3rem;
+    }
+    .proof-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+    @media (min-width: 900px) {
+      .proof-cards { grid-template-columns: repeat(4, 1fr); }
+    }
+    .proof-card {
+      background: var(--grey-dark);
+      border-top: 2px solid var(--gold);
+      padding: 2.5rem;
+    }
+    .proof-brand {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+    .proof-text {
+      font-size: 0.96rem;
+      line-height: 1.72;
+      color: var(--grey-text);
+    }
+    .avatars {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #1a1a1a;
+      border: 1px solid var(--grey-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--grey-text);
+    }
+    .avatars-note {
+      font-size: 0.74rem;
+      color: var(--grey-text);
+      letter-spacing: 0.06em;
+      margin-left: 0.5rem;
+    }
+
+    /* ─── SECTION 9: BOOK A CALL ───────────────────────────── */
+    .book {
+      background: var(--dark);
+      padding: 8rem 2.5rem;
+      border-bottom: 1px solid var(--grey-border);
+    }
+    .book-inner { max-width: 1380px; margin: 0 auto; }
+    .calendly-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .book-h2 {
+      font-size: clamp(2.25rem, 3.75vw, 3.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      margin-bottom: 0.75rem;
+    }
+    .book-sub {
+      font-size: 1rem;
+      color: var(--grey-text);
+      margin-bottom: 3rem;
+      line-height: 1.6;
+    }
+    .calendly-shell {
+      border: 1px solid var(--grey-border);
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .book-email {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+    .book-email p {
+      font-size: 0.85rem;
+      color: var(--grey-text);
+      margin-bottom: 0.5rem;
+    }
+    .book-email a {
+      font-size: 0.9rem;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color var(--t);
+    }
+    .book-email a:hover { color: var(--gold); }
+
+    /* ─── SECTION: HELPING NEXT GEN CREATORS ─────────────────── */
+    .creators-section {
+      background: var(--black);
+      padding: 8rem 2.5rem;
+      border-bottom: 1px solid var(--grey-border);
+      text-align: center;
+    }
+    .creators-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .creators-h2 {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .creators-body {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--grey-text);
+    }
+    .creators-body p + p { margin-top: 1.25rem; }
+    .creators-coming {
+      display: inline-block;
+      margin-top: 2rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 0.5rem 1.25rem;
+    }
+
+    /* ─── NOTIFY MODAL ─────────────────────────────────────── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s;
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+    .modal-box {
+      background: #111;
+      border: 1px solid var(--gold);
+      padding: 3rem;
+      max-width: 460px;
+      width: calc(100% - 3rem);
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.25rem;
+      background: none;
+      border: none;
+      color: var(--grey-text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0;
+    }
+    .modal-close:hover { color: var(--white); }
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+    .modal-sub {
+      font-size: 0.88rem;
+      color: var(--grey-text);
+      line-height: 1.65;
+      margin-bottom: 2rem;
+    }
+    .modal-form { display: flex; flex-direction: column; gap: 0.85rem; }
+    .modal-input {
+      background: #1a1a1a;
+      border: 1px solid var(--grey-border);
+      color: var(--white);
+      padding: 0.85rem 1rem;
+      font-size: 0.92rem;
+      font-family: inherit;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    }
+    .modal-input::placeholder { color: #555; }
+    .modal-input:focus { border-color: var(--gold); }
+    .modal-msg { font-size: 0.88rem; text-align: center; min-height: 1.1rem; margin-top: 0.25rem; line-height: 1.6; }
+    .modal-msg.success { color: var(--gold); font-weight: 600; display: block; padding: 1rem 0; }
+    .modal-msg.error { color: #e05a5a; }
+
+    /* ─── SECTION 10: FOOTER CTA ───────────────────────────── */
+    .footer-hero {
+      background: var(--dark);
+      padding: 8rem 2.5rem 6rem;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--grey-border);
+    }
+    .footer-hero-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .fh-h2 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.035em;
+      line-height: 0.97;
+      margin-bottom: 1rem;
+    }
+    .fh-sub {
+      font-size: 1.1rem;
+      line-height: 1.65;
+      color: var(--grey-text);
+      margin-bottom: 2rem;
+      max-width: 480px;
+    }
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      margin-top: 2rem;
+    }
+    .social-link {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--grey-text);
+      text-decoration: none;
+      transition: color var(--t);
+    }
+    .social-link:hover { color: var(--gold); }
+    .fh-photo { width: 100%; aspect-ratio: 3/4; }
+    .watermark {
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .watermark-text {
+      display: block;
+      font-size: clamp(5rem, 16vw, 14rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: #141414;
+      white-space: nowrap;
+      line-height: 1;
+      user-select: none;
+    }
+
+    /* ─── FOOTER BAR ───────────────────────────────────────── */
+    .footer {
+      background: var(--black);
+      border-top: 1px solid var(--grey-border);
+      padding: 2rem 2.5rem;
+    }
+    .footer-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-copy {
+      font-size: 0.7rem;
+      color: #444;
+      letter-spacing: 0.04em;
+    }
+    .footer-links {
+      display: flex;
+      gap: 1.75rem;
+    }
+    .footer-links a {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #444;
+      text-decoration: none;
+      transition: color var(--t);
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    /* ─── RESPONSIVE ───────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      .ham { display: flex; }
+      .nav-inner { grid-template-columns: 1fr auto; }
+      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem; }
+      .hero-photo-wrap { max-height: 380px; order: -1; }
+      .stats-row { grid-template-columns: 1fr; padding: 1.5rem 1.5rem; }
+      .stats-row .stat-item { border-right: none; border-bottom: 1px solid var(--grey-border); padding: 1.25rem; }
+      .stats-row .stat-item:last-child { border-bottom: none; }
+      .problem-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .case-block { grid-template-columns: 1fr; gap: 3rem; }
+      .how-row { grid-template-columns: 1fr; gap: 2rem; }
+      .proof-cards { grid-template-columns: 1fr; }
+      .footer-hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .pull-quote { padding: 6rem 2rem; }
+      .fab { bottom: 1.25rem; right: 1.25rem; padding: 0.75rem 1.25rem; }
+    }
+    @media (max-width: 600px) {
+      .stats-row .stat-item { padding: 1rem; }
+      .how-row { gap: 1.5rem; }
+    }
+
+    /* ─── NAV MOBILE CTA (hidden on desktop) ───────────────── */
+    .nav-mobile-cta { display: none; }
+
+    /* ─── MOBILE (≤768px) ──────────────────────────────────── */
+    @media (max-width: 768px) {
+
+      /* Overflow fix */
+      html { overflow-x: hidden; }
+
+      /* ── NAV ── */
+      .nav { padding: 0 1.25rem; }
+      .ham { display: none !important; }
+      .nav-email { display: none !important; }
+      .nav-mobile-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--black);
+        background: var(--gold);
+        padding: 8px 16px;
+        white-space: nowrap;
+        transition: background var(--t);
+      }
+      .nav-mobile-cta:hover { background: var(--gold-hover); }
+
+      /* ── HERO ── */
+      .hero-inner { padding: 2.5rem 1.25rem; gap: 2rem; }
+      .hero-h1 { font-size: clamp(2rem, 9vw, 2.8rem) !important; }
+      .hero-photo-wrap {
+        order: 2;
+        max-height: 300px;
+        height: 300px;
+        aspect-ratio: unset;
+        width: 100%;
+      }
+      .hero-photo-wrap img { height: 100%; }
+      .hero-cta { display: block; width: 100%; text-align: center; box-sizing: border-box; }
+
+      /* ── STATS ROW (2x2 grid) ── */
+      .stats-row { grid-template-columns: 1fr 1fr !important; padding: 0 !important; }
+      .stats-row .stat-item {
+        border-right: 1px solid var(--grey-border) !important;
+        border-bottom: 1px solid var(--grey-border) !important;
+        padding: 1.25rem 1rem !important;
+      }
+      .stats-row .stat-item:nth-child(even) { border-right: none !important; }
+      .stats-row .stat-item:last-child { border-bottom: none !important; border-right: none !important; }
+
+      /* ── DISABLE SCROLL ANIMATIONS (show all immediately on load) ── */
+      .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+
+      /* ── TYPOGRAPHY CAPS (48px max) ── */
+      .pull-quote-text,
+      .problem-h2,
+      .timeline-h2,
+      .case-h2,
+      .lp-h2,
+      .how-h2,
+      .proof-h2,
+      .book-h2,
+      .creators-h2,
+      .fh-h2,
+      .brands-h2 {
+        font-size: clamp(1.8rem, 8vw, 3rem) !important;
+      }
+
+      /* ── WATERMARK (hide to prevent horizontal scroll) ── */
+      .watermark { display: none; }
+
+      /* ── MARQUEE (slow down, prevent overflow) ── */
+      .marquee-set { animation-duration: 60s; }
+      .marquee-track { max-width: 100vw; }
+
+      /* ── GENERAL SECTION PADDING ── */
+      .pull-quote        { padding: 4rem 1.25rem; }
+      .problem           { padding: 4rem 1.25rem; }
+      .problem-inner     { gap: 2rem; }
+      .brands            { padding: 3rem 1.25rem 2rem; }
+      .brands-header     { padding: 0; margin-bottom: 1.5rem; }
+      .brands-label      { padding: 0 0 1rem; }
+      .timeline-section  { padding: 4rem 1.25rem; }
+      .case-study        { padding: 4rem 1.25rem; }
+      .live-proof        { padding: 4rem 1.25rem; }
+      .how               { padding: 4rem 1.25rem; }
+      .how-inner         { padding: 2rem 1.25rem; }
+      .proof             { padding: 4rem 1.25rem; }
+      .book              { padding: 4rem 1.25rem; }
+      .creators-section  { padding: 4rem 1.25rem; }
+      .footer-hero       { padding: 4rem 1.25rem 3rem; }
+      .footer            { padding: 1.5rem 1.25rem; }
+
+      /* ── ANALYTICS DASHBOARD (2x2 on mobile) ── */
+      .analytics-grid { grid-template-columns: 1fr 1fr !important; }
+      .analytics-card { padding: 1.5rem 1.25rem; }
+      .card-big-num { font-size: clamp(2rem, 7vw, 3rem); }
+      .combined-bar { padding: 1.5rem 1.25rem; }
+
+      /* ── HOW IT WORKS (full width, gold left border) ── */
+      .offer-grid { grid-template-columns: 1fr !important; }
+      .offer-card {
+        padding: 2rem 1.5rem !important;
+        border-top: 1px solid rgba(201,162,39,0.2) !important;
+        border-left: 3px solid var(--gold) !important;
+        border-right: 1px solid rgba(201,162,39,0.2) !important;
+        border-bottom: 1px solid rgba(201,162,39,0.2) !important;
+      }
+
+      /* ── TIMELINE (single column, keep gold line) ── */
+      .timeline          { padding-left: 2rem; padding-right: 0; }
+      .tl-dot            { left: -2rem; }
+      .tl-text           { font-size: 0.9rem; line-height: 1.75; }
+      .tl-entry          { flex-direction: column; gap: 1.5rem; }
+      .tl-entry:nth-child(n) .tl-photo { transform: none !important; width: 100% !important; }
+      .tl-photo          { max-width: 220px; aspect-ratio: 4/3; }
+
+      /* ── CASE STUDY (stack to single column) ── */
+      .case-block        { grid-template-columns: 1fr !important; gap: 2rem; }
+      .case-stats-card   { padding: 1.75rem; }
+      .case-stat-num     { font-size: clamp(2rem, 8vw, 3rem); }
+
+      /* ── FLOATING CTA (bottom center) ── */
+      .fab {
+        left: 50%;
+        right: auto;
+        bottom: 1rem;
+        transform: translateX(-50%);
+        font-size: 0.7rem;
+        padding: 0.65rem 1.25rem;
+      }
+      .fab:hover { transform: translateX(-50%) translateY(-2px); }
+
+      /* ── CALENDLY ── */
+      .calendly-inline-widget { height: 580px !important; }
+
+      /* ── BUTTONS FULL WIDTH ── */
+      .btn, .btn-lg {
+        width: 100%;
+        display: block;
+        text-align: center;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+
+      /* ── FOOTER HERO ── */
+      .footer-hero-inner { gap: 2rem; }
+      .fh-sub            { max-width: 100%; }
+      .fh-photo          { height: 280px; aspect-ratio: unset; }
+
+      /* ── LINE HEIGHT ── */
+      body { line-height: 1.75; }
+
+      /* ── FOOTER BAR ── */
+      .footer-inner  { flex-direction: column; align-items: center; gap: 0.75rem; }
+      .footer-links  { justify-content: center; }
+    }
+
+    /* ── VERY SMALL SCREENS (≤400px) ── */
+    @media (max-width: 400px) {
+      .analytics-grid { grid-template-columns: 1fr !important; }
+      .hero-h1 { font-size: 1.85rem !important; }
+      .analytics-card { padding: 1.25rem 1rem; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Connor Ransley",
+    "url": "https://www.byransley.com",
+    "image": "https://www.byransley.com/photos/hero.jpg",
+    "jobTitle": "Personal Brand & Social Media Strategy Consultant",
+    "description": "Helps founders and marketing teams with personal brand, organic social media, and viral content. Based in Auckland, New Zealand; works remotely worldwide.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Auckland",
+      "addressCountry": "NZ"
+    },
+    "sameAs": [
+      "https://www.instagram.com/c_ransleyy/",
+      "https://www.tiktok.com/@c_ransleyy",
+      "https://www.linkedin.com/in/connor-ransley/",
+      "https://www.youtube.com/@connorransley"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Floating CTA -->
+  <a href="#book-a-call" class="fab">Let's Chat ☎</a>
+
+  <!-- ═══ NAV ════════════════════════════════════════════════ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Connor Ransley</a>
+      <ul class="nav-links">
+        <li><a href="#my-story">My Story</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#live-proof">My Brand</a></li>
+        <li><a href="#book-a-call">Let's Chat</a></li>
+      </ul>
+      <a href="mailto:connor@byransley.com" class="nav-email">connor@byransley.com</a>
+      <a href="#book-a-call" class="nav-mobile-cta">Let's Chat</a>
+      <button class="ham" id="ham" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mob-nav">
+    <a href="#my-story">My Story</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#live-proof">My Brand</a>
+    <a href="#book-a-call">Let's Chat</a>
+  </div>
+
+  <main>
+
+    <!-- ═══ 1. HERO ════════════════════════════════════════════ -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text fade-in">
+          <h1 class="hero-h1">Attention Is The New Form Of Currency In 2026.</h1>
+          <p class="hero-sub">I built my audience to over 100,000. Then helped 200+ brands grow theirs. Now I'll help you build yours.</p>
+          <p class="hero-credential">Ex Head of Production at The Attention Seeker.</p>
+          <a href="#book-a-call" class="hero-cta">Let's Chat</a>
+        </div>
+        <div class="hero-photo-wrap fade-in">
+          <img src="photos/Hero CJ Studio photshoot-034.jpg" alt="Connor Ransley" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="hero-photo-placeholder" style="display:none;">Add hero.jpg to the photos folder</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 2. STATS ROW ═════════════════════════════════════════ -->
+    <div class="stats-row fade-in">
+      <div class="stat-item">
+        <div class="stat-num" data-count="4" data-suffix=" Years">4 Years</div>
+        <div class="stat-lbl">Agency Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="200" data-suffix="+">200+</div>
+        <div class="stat-lbl">Brands Worked With</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="100" data-suffix="K+">100K+</div>
+        <div class="stat-lbl">Followers Built</div>
+      </div>
+    </div>
+
+    <!-- ═══ 3. THE PROBLEM ═════════════════════════════════════ -->
+    <section class="problem">
+      <div class="problem-inner">
+        <div class="fade-in">
+          <span class="section-label">The Problem</span>
+          <h2 class="problem-h2">We Know Social Media Is Important.<br>But Where Do You Start?</h2>
+        </div>
+        <div class="body-copy fade-in" style="padding-top:2.5rem;">
+          <p>Posting isn't the problem. Most founders and teams don't know how attention on short-form video actually works, so effort doesn't turn into growth.</p>
+          <p>The most common questions I get: <em>What do I post? Where do I start? I've run out of ideas.</em></p>
+          <p>After doing this for the last 10 years, I've learnt how to navigate those problems and create systems and frameworks to create consistent content that people actually want to watch.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 4. HOW IT WORKS ════════════════════════════════════ -->
+    <section class="how" id="how-it-works">
+      <div class="how-inner">
+        <span class="section-label fade-in">The Offering</span>
+        <h2 class="how-h2 fade-in">How It Works.</h2>
+
+        <div class="offer-grid">
+
+          <!-- Offer 1: 1:1 Consulting -->
+          <div class="offer-card fade-in">
+            <div class="how-tag">1:1 Consulting</div>
+            <h3 class="how-title">I Help You Build An Audience Online.</h3>
+            <p class="how-body">I work with you directly to build your content strategy, create a system you can actually execute, and grow an audience that compounds over time.</p>
+            <ul class="how-bullets">
+              <li>Full social audit</li>
+              <li>Custom content strategy</li>
+              <li>Content system you can actually execute</li>
+              <li>Ongoing support and accountability</li>
+            </ul>
+            <a href="https://calendly.com/connor-byransley/30min" target="_blank" rel="noopener" class="btn">Get in Touch</a>
+          </div>
+
+          <!-- Offer 2: Team Content Creation Workshop -->
+          <div class="offer-card fade-in">
+            <div class="how-tag">Team Content Creation Workshop</div>
+            <h3 class="how-title">Teach Your Team to Create Content That Actually Works.</h3>
+            <p class="how-body">Most in-house teams are creating content without the expertise behind it. I teach your team how I approach content creation, the same frameworks I used to grow my own brand and across 200+ campaigns, tailored specifically to your business.</p>
+            <ul class="how-bullets">
+              <li>Full team content audit</li>
+              <li>Content frameworks and templates</li>
+              <li>Live workshop and training</li>
+              <li>Content system your team owns and runs</li>
+            </ul>
+            <a href="https://calendly.com/connor-byransley/30min" target="_blank" rel="noopener" class="btn">Get in Touch</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 5. SOCIAL PROOF ════════════════════════════════════ -->
+    <section class="proof" id="social-proof">
+      <div class="proof-inner">
+        <span class="section-label fade-in">Results</span>
+        <h2 class="proof-h2 fade-in">Results From Campaigns I Worked On</h2>
+        <p class="proof-intro fade-in">A few of the clients I worked on while at The Attention Seeker, and some of what we achieved.</p>
+        <div class="proof-cards">
+          <div class="proof-card fade-in">
+            <div class="proof-brand">One NZ</div>
+            <p class="proof-text">Grew their following to 140K+ and created the highest engaged ad globally on TikTok.</p>
+          </div>
+          <div class="proof-card fade-in">
+            <div class="proof-brand">Pizza Hut NZ</div>
+            <p class="proof-text">15x follower growth. Now NZ's largest pizza brand on social media.</p>
+          </div>
+          <div class="proof-card fade-in">
+            <div class="proof-brand">Six60</div>
+            <p class="proof-text">Created social content while touring with New Zealand's biggest band. Generated 2M+ views across the tour campaign.</p>
+          </div>
+          <div class="proof-card fade-in">
+            <div class="proof-brand">Spark Media</div>
+            <p class="proof-text">Recut the narrative for them. Grew to 30,000 followers in a matter of weeks from basically nothing.</p>
+          </div>
+        </div>
+        <div class="avatars fade-in">
+          <div class="avatar">JA</div>
+          <div class="avatar">MK</div>
+          <div class="avatar">TC</div>
+          <div class="avatar">SR</div>
+          <div class="avatar">BL</div>
+          <div class="avatar">NF</div>
+          <div class="avatar">DW</div>
+          <div class="avatar">PH</div>
+          <span class="avatars-note">200+ brands worked with at The Attention Seeker</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 6. BRANDS I'VE CREATED CONTENT FOR ══════════════════ -->
+    <section class="brands">
+      <div class="brands-header fade-in">
+        <h2 class="brands-h2">Brands I've Created Content For</h2>
+        <p class="section-label" style="border-left:none; padding-left:0; margin-top:0.75rem; letter-spacing:0.14em;">Via The Attention Seeker &nbsp;+&nbsp; Personal Brand Partnerships</p>
+      </div>
+      <div class="marquee-track" aria-hidden="true">
+        <div class="marquee-set">
+          <span class="marquee-item">One NZ</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Pizza Hut</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Six60</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Anchor</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Garnier</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Panhead</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">AA Insurance</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">La Roche-Posay</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Les Mills</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Pump</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Barfoot &amp; Thompson</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Musashi</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Woolworths</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Showpo</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Extra</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">AUT</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Simpson</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">And 190+ More</span><span class="marquee-sep">•</span>
+        </div>
+        <div class="marquee-set" aria-hidden="true">
+          <span class="marquee-item">One NZ</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Pizza Hut</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Six60</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Anchor</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Garnier</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Panhead</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">AA Insurance</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">La Roche-Posay</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Les Mills</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Pump</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Barfoot &amp; Thompson</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Musashi</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Woolworths</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Showpo</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Extra</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">AUT</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">Simpson</span><span class="marquee-sep">•</span>
+          <span class="marquee-item">And 190+ More</span><span class="marquee-sep">•</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 5. MY STORY - TIMELINE ════════════════════════════ -->
+    <section class="timeline-section" id="my-story">
+      <div class="timeline-header fade-in">
+        <span class="section-label">My Story</span>
+        <h2 class="timeline-h2">I Started Making Videos In 2011. I've Never Stopped.</h2>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline">
+          <div class="tl-entry fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year">2011</div>
+              <p class="tl-text">Started making videos after school at the skate park with friends.</p>
+            </div>
+            <div class="tl-photo"><img src="photos/2011.jpg" alt="2011" onerror="this.style.display='none';"></div>
+          </div>
+          <div class="tl-entry fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year">2016</div>
+              <p class="tl-text">Started taking Instagram seriously and became obsessed with understanding why people watch content.</p>
+            </div>
+            <div class="tl-photo"><img src="photos/2016.jpg" alt="2016" onerror="this.style.display='none';"></div>
+          </div>
+          <div class="tl-entry fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year">2018</div>
+              <p class="tl-text">Dropped out of university. I was failing and didn't like the path I was on. Studied at Media Design School and got a Bachelor of Media Design, 2019 to 2021.</p>
+            </div>
+            <div class="tl-photo"><img src="photos/2018.jpg" alt="2018" onerror="this.style.display='none';"></div>
+          </div>
+          <div class="tl-entry fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year">2019–2021</div>
+              <p class="tl-text">Working construction. Trying to find my foot in the industry. A man named Stanley Henry gave me that chance when I joined The Attention Seeker, when it was just a LinkedIn ghostwriting thing. Little did I know it would go on to become the biggest social media marketing agency in the country.</p>
+            </div>
+            <div class="tl-photo"><img src="photos/2019-2021.jpg" alt="2019-2021" onerror="this.style.display='none';"></div>
+          </div>
+          <div class="tl-entry fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year">2022</div>
+              <p class="tl-text">Joined as their first videographer. I'd failed engineering, was working construction. Stanley took a chance on me.</p>
+            </div>
+            <div class="tl-photo"><img src="photos/2022.JPG" alt="2022" onerror="this.style.display='none';"></div>
+          </div>
+          <div class="tl-entry fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year">2022–2025</div>
+              <p class="tl-text">During that time I:</p>
+              <ul class="tl-list">
+                <li>Helped scale the team from 6 to 40 people</li>
+                <li>Built the production arm from 1 to 14 staff</li>
+                <li>Worked with 200+ brands</li>
+                <li>Built the highest engaged ad globally on TikTok with One NZ</li>
+                <li>Toured with Six60 creating social content</li>
+                <li>Generated millions of views across campaigns</li>
+                <li>Grew my own channels to 100,000+ followers</li>
+              </ul>
+            </div>
+            <div class="tl-photo"><img src="photos/2022-2025.jpg" alt="2022-2025" onerror="this.style.display='none';"></div>
+          </div>
+          <div class="tl-entry fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year">2023</div>
+              <p class="tl-text">Started Daplaza, my clothing brand. Made a video every single day for 330+ days.</p>
+            </div>
+            <div class="tl-photo"><img src="photos/2023.JPG" alt="2023" onerror="this.style.display='none';"></div>
+          </div>
+          <div class="tl-entry fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year">2024</div>
+              <p class="tl-text">Started my personal brand. I lost the passion to keep Daplaza going, and my attention switched. I understood the long-term value of a personal brand. If I had attention and a brand, I could get to a point where I could do whatever I want.</p>
+            </div>
+            <div class="tl-photo"><img src="photos/2024.jpg" alt="2024" onerror="this.style.display='none';"></div>
+          </div>
+          <div class="tl-entry fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year">2025</div>
+              <p class="tl-text">Signed with No Sad Cowboys talent agency. Now doing UGC for brands like Pump, Woolworths, Anchor, Extra Gum, La Roche-Posay, Garnier, Chemist Warehouse, Musashi.</p>
+            </div>
+            <div class="tl-photo"><img src="photos/2025.jpg" alt="2025" onerror="this.style.display='none';"></div>
+          </div>
+          <div class="tl-entry fade-in">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year">2026+</div>
+              <p class="tl-text">I reached a point where things felt comfortable, and that's exactly when I knew I needed to take a risk. Now I'm chasing my own dream.</p>
+            </div>
+            <div class="tl-photo"><img src="photos/2026.jpg" alt="2026+" onerror="this.style.display='none';"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-pull-wrap">
+        <div class="timeline-pull fade-in">
+          <p>"Everything I do for other people I've done for myself."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 6. LIVE PROOF ══════════════════════════════════════ -->
+    <section class="live-proof" id="live-proof">
+      <div class="live-proof-inner">
+        <div class="live-proof-header fade-in">
+          <span class="section-label">• Live Proof</span>
+          <h2 class="lp-h2">My Personal Brand Analytics.</h2>
+          <p class="lp-sub">Combined reach across all platforms over the last 30 days, updated monthly.</p>
+        </div>
+
+        <div class="analytics-grid fade-in">
+
+          <!-- Instagram -->
+          <div class="analytics-card">
+            <div class="card-top-row">
+              <div class="card-platform">📸 &nbsp;Instagram</div>
+              <span class="card-badge">GROWING ↑</span>
+            </div>
+            <div class="card-big-num" data-count="2.5" data-suffix="M" data-decimals="1">2.5M</div>
+            <div class="card-label">Views in 30 Days</div>
+            <div class="card-follower-line"><strong>22K followers</strong> &nbsp;•&nbsp; +1.3K this month</div>
+            <div class="sparkline">
+              <div class="sparkline-bar" style="height:35%"></div>
+              <div class="sparkline-bar" style="height:48%"></div>
+              <div class="sparkline-bar" style="height:42%"></div>
+              <div class="sparkline-bar" style="height:60%"></div>
+              <div class="sparkline-bar" style="height:68%"></div>
+              <div class="sparkline-bar" style="height:82%"></div>
+              <div class="sparkline-bar peak" style="height:100%"></div>
+            </div>
+            <a href="https://www.instagram.com/c_ransleyy/" target="_blank" rel="noopener" class="card-link">instagram.com/c_ransleyy ↗</a>
+          </div>
+
+          <!-- TikTok -->
+          <div class="analytics-card">
+            <div class="card-top-row">
+              <div class="card-platform">🎵 &nbsp;TikTok</div>
+              <span class="card-badge">GROWING ↑</span>
+            </div>
+            <div class="card-big-num" data-count="1.2" data-suffix="M" data-decimals="1">1.2M</div>
+            <div class="card-label">Views in 30 Days</div>
+            <div class="card-follower-line"><strong>50.2K followers</strong> &nbsp;•&nbsp; +1.2K this month</div>
+            <div class="sparkline">
+              <div class="sparkline-bar" style="height:40%"></div>
+              <div class="sparkline-bar" style="height:55%"></div>
+              <div class="sparkline-bar" style="height:48%"></div>
+              <div class="sparkline-bar" style="height:62%"></div>
+              <div class="sparkline-bar" style="height:70%"></div>
+              <div class="sparkline-bar" style="height:78%"></div>
+              <div class="sparkline-bar peak" style="height:100%"></div>
+            </div>
+            <a href="https://www.tiktok.com/@c_ransleyy" target="_blank" rel="noopener" class="card-link">tiktok.com/@c_ransleyy ↗</a>
+          </div>
+
+          <!-- LinkedIn -->
+          <div class="analytics-card">
+            <div class="card-top-row">
+              <div class="card-platform">💼 &nbsp;LinkedIn</div>
+              <span class="card-badge">GROWING ↑</span>
+            </div>
+            <div class="card-big-num" data-count="112" data-suffix="K">112K</div>
+            <div class="card-label">Impressions in 30 Days</div>
+            <div class="card-follower-line"><strong>7.1K followers</strong> &nbsp;•&nbsp; +12% this month</div>
+            <div class="sparkline">
+              <div class="sparkline-bar" style="height:30%"></div>
+              <div class="sparkline-bar" style="height:38%"></div>
+              <div class="sparkline-bar" style="height:50%"></div>
+              <div class="sparkline-bar" style="height:55%"></div>
+              <div class="sparkline-bar" style="height:68%"></div>
+              <div class="sparkline-bar" style="height:82%"></div>
+              <div class="sparkline-bar peak" style="height:100%"></div>
+            </div>
+            <a href="https://www.linkedin.com/in/connor-ransley/" target="_blank" rel="noopener" class="card-link">linkedin.com/in/connor-ransley ↗</a>
+          </div>
+
+          <!-- YouTube -->
+          <div class="analytics-card">
+            <div class="card-top-row">
+              <div class="card-platform">▶️ &nbsp;YouTube</div>
+              <span class="card-badge">GROWING ↑</span>
+            </div>
+            <div class="card-big-num" data-count="1.1" data-suffix="M" data-decimals="1">1.1M</div>
+            <div class="card-label">Views in 30 Days</div>
+            <div class="card-follower-line"><strong>12K subscribers</strong> &nbsp;•&nbsp; +450 this month</div>
+            <div class="sparkline">
+              <div class="sparkline-bar" style="height:25%"></div>
+              <div class="sparkline-bar" style="height:35%"></div>
+              <div class="sparkline-bar" style="height:42%"></div>
+              <div class="sparkline-bar" style="height:52%"></div>
+              <div class="sparkline-bar" style="height:65%"></div>
+              <div class="sparkline-bar" style="height:78%"></div>
+              <div class="sparkline-bar peak" style="height:100%"></div>
+            </div>
+            <a href="https://www.youtube.com/@connorransley" target="_blank" rel="noopener" class="card-link">youtube.com/@connorransley ↗</a>
+          </div>
+
+        </div>
+
+        <div class="combined-bar fade-in">
+          <div class="combined-bar-text"><span class="combined-num" data-count="4.8" data-suffix="M+" data-decimals="1">4.8M+</span> combined views across all platforms in the last 30 days</div>
+          <div class="combined-bar-sub">Stats updated monthly &nbsp;•&nbsp; Last updated: March 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 7. PERSONAL CASE STUDIES ═══════════════════════════ -->
+    <section class="case-study" id="case-study">
+      <div class="case-study-inner">
+        <span class="section-label fade-in">Personal Case Studies</span>
+        <h2 class="case-h2 fade-in" style="margin-bottom:4rem;">Personal Case Studies</h2>
+
+        <!-- Case: Daplaza -->
+        <div class="case-block">
+          <div class="fade-in">
+            <h3 class="case-h3">Daplaza</h3>
+            <div class="body-copy">
+              <p>Daplaza was my first real business, a clothing brand.</p>
+              <p>I didn't build a brand then find an audience. I documented the journey publicly. People followed the story. Sales followed.</p>
+              <p>I lost the passion to keep it going. My attention switched to building my personal brand. I understood the long-term value.</p>
+            </div>
+            <a href="https://www.instagram.com/daplaza/" target="_blank" rel="noopener" class="case-link">Check it out ↗</a>
+          </div>
+          <div class="fade-in">
+            <div class="case-stats-card">
+              <div class="case-stat-row">
+                <div class="case-stat-num" data-count="25000" data-suffix="+">25,000+</div>
+                <div class="case-stat-lbl">Community Members</div>
+              </div>
+              <div class="case-stat-row">
+                <div class="case-stat-num">Millions</div>
+                <div class="case-stat-lbl">Organic Views</div>
+              </div>
+              <div class="case-stat-row">
+                <div class="case-stat-num" data-count="0" data-start="1000" data-prefix="$">$0</div>
+                <div class="case-stat-lbl">Ad Spend</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 9. BOOK A CALL ═════════════════════════════════════ -->
+    <section class="book" id="book-a-call">
+      <div class="book-inner">
+        <span class="section-label fade-in">Get in Touch</span>
+        <h2 class="book-h2 fade-in">Let's Talk.</h2>
+        <p class="book-sub fade-in">30 minutes. We'll see if I can help. No pitch.</p>
+        <div class="calendly-wrap fade-in">
+          <div class="calendly-shell">
+            <div
+              class="calendly-inline-widget"
+              data-url="https://calendly.com/connor-byransley/30min"
+              style="min-width:320px;height:700px;">
+            </div>
+          </div>
+        </div>
+        <div class="book-email fade-in">
+          <p>Not ready to book? Just send me an email.</p>
+          <a href="mailto:connor@byransley.com">connor@byransley.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ NEXT GEN CREATORS (Coming Soon) ═══════════════════ -->
+    <section class="creators-section">
+      <div class="creators-inner">
+        <span class="section-label fade-in">Coming Soon</span>
+        <h2 class="creators-h2 fade-in">Helping the Next Generation of Young Ambitious People</h2>
+        <div class="creators-body fade-in">
+          <p>I'm launching a community for young people who have big dreams and want to create their own life, to go out and do great things.</p>
+          <p>I know that having a personal brand is why I've been able to do that. I want to help others build theirs.</p>
+        </div>
+        <button class="creators-coming fade-in" id="notify-btn">Get Notified →</button>
+      </div>
+    </section>
+
+    <!-- NOTIFY MODAL -->
+    <div class="modal-overlay" id="notify-modal">
+      <div class="modal-box">
+        <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+        <p class="modal-title">Get Early Access</p>
+        <p class="modal-sub">Be the first to know when the community launches. Drop your email and I'll reach out personally.</p>
+        <form class="modal-form" id="notify-form">
+          <input type="text" class="modal-input" id="notify-name" placeholder="Your full name" required>
+          <input type="email" class="modal-input" id="notify-email" placeholder="your@email.com" required>
+          <button type="submit" class="btn">Notify Me</button>
+          <p class="modal-msg" id="modal-msg"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- ═══ 10. FOOTER CTA ═════════════════════════════════════ -->
+    <section class="footer-hero">
+      <div class="footer-hero-inner">
+        <div class="fade-in">
+          <h2 class="fh-h2">Let's Talk.</h2>
+          <p class="fh-sub">If you know your brand should be showing up online but don't know where to start, let's figure it out.</p>
+          <p class="fh-sub" style="margin-bottom:1.5rem;">Why build a personal brand? A lot of people work with you because they like you. A personal brand is taking the personality you already have, the one that already works in real life, and putting it online. Instead of speaking to 10 people a day, you can speak to a million. Where attention goes, the money will follow.</p>
+          <a href="#book-a-call" class="btn btn-lg">Let's Chat</a>
+          <div class="social-row">
+            <a href="https://www.instagram.com/c_ransleyy/" class="social-link" target="_blank" rel="noopener">Instagram ↗</a>
+            <a href="https://www.tiktok.com/@c_ransleyy" class="social-link" target="_blank" rel="noopener">TikTok ↗</a>
+            <a href="https://www.linkedin.com/in/connor-ransley/" class="social-link" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="https://www.youtube.com/@connorransley" class="social-link" target="_blank" rel="noopener">YouTube ↗</a>
+          </div>
+        </div>
+        <div class="fade-in">
+          <div class="fh-photo" style="overflow:hidden;">
+            <img src="photos/CJ Studio photshoot-031.jpg" alt="Connor Ransley" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+          </div>
+        </div>
+      </div>
+      <div class="watermark" aria-hidden="true">
+        <span class="watermark-text">Connor&nbsp;Ransley</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER BAR ══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy">© <span id="yr"></span> Connor Ransley. All rights reserved.</span>
+      <nav class="footer-links">
+        <a href="#my-story">Story</a>
+        <a href="#how-it-works">Work With Me</a>
+        <a href="#social-proof">Results</a>
+        <a href="#book-a-call">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script async src="https://assets.calendly.com/assets/external/widget.js"></script>
+  <script>
+    // ═══ LIVE ANALYTICS - UPDATE THESE NUMBERS MONTHLY ═══
+    const STATS_LAST_UPDATED   = "March 2026";
+    const IG_FOLLOWERS         = "22K";
+    const IG_FOLLOWERS_GROWTH  = "+1.3K this month";
+    const IG_VIEWS_30          = "2.5M";
+    const TT_FOLLOWERS         = "50.2K";
+    const TT_FOLLOWERS_GROWTH  = "+1.2K this month";
+    const TT_VIEWS_30          = "1.2M";
+    const LI_FOLLOWERS         = "7.1K";
+    const LI_FOLLOWERS_GROWTH  = "+12% this month";
+    const LI_IMPRESSIONS_30    = "112K";
+    const YT_SUBSCRIBERS       = "12K";
+    const YT_SUBSCRIBERS_GROWTH= "+450 this month";
+    const YT_VIEWS_30          = "1.1M";
+    const COMBINED_VIEWS       = "4.8M+";
+    // ═════════════════════════════════════════════════════
+
+    (function () {
+      document.getElementById('yr').textContent = new Date().getFullYear();
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.fade-in').forEach(function (el) { io.observe(el); });
+
+      // Count-up animation (supports decimals via data-decimals attribute)
+      function runCountUp(el) {
+        var target = parseFloat(el.getAttribute('data-count'));
+        var from = el.getAttribute('data-start') ? parseFloat(el.getAttribute('data-start')) : 0;
+        var suffix = el.getAttribute('data-suffix') || '';
+        var prefix = el.getAttribute('data-prefix') || '';
+        var decimals = el.getAttribute('data-decimals') ? parseInt(el.getAttribute('data-decimals'), 10) : 0;
+        var duration = 1600;
+        var startTs = null;
+        function step(ts) {
+          if (!startTs) startTs = ts;
+          var progress = Math.min((ts - startTs) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var current = from + eased * (target - from);
+          var display = decimals > 0 ? current.toFixed(decimals) : (current >= 1000 ? Math.round(current).toLocaleString() : Math.round(current));
+          el.textContent = prefix + display + suffix;
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+      var countIO = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { runCountUp(e.target); countIO.unobserve(e.target); }
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('[data-count]').forEach(function(el) { countIO.observe(el); });
+
+      // ── Notify modal ──────────────────────────────────────
+      var notifyBtn   = document.getElementById('notify-btn');
+      var notifyModal = document.getElementById('notify-modal');
+      var modalClose  = document.getElementById('modal-close');
+      var notifyForm  = document.getElementById('notify-form');
+      var modalMsg    = document.getElementById('modal-msg');
+
+      function openModal()  { notifyModal.classList.add('open');    document.body.style.overflow = 'hidden'; }
+      function closeModal() { notifyModal.classList.remove('open'); document.body.style.overflow = ''; }
+
+      notifyBtn.addEventListener('click', openModal);
+      modalClose.addEventListener('click', closeModal);
+      notifyModal.addEventListener('click', function(e) { if (e.target === notifyModal) closeModal(); });
+
+      notifyForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var name  = document.getElementById('notify-name').value.trim();
+        var email = document.getElementById('notify-email').value.trim();
+        if (!name || !email) return;
+        var btn = notifyForm.querySelector('button[type="submit"]');
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+        modalMsg.textContent = '';
+        modalMsg.className = 'modal-msg';
+
+        fetch('https://api.airtable.com/v0/appHQc06NA41OGlrC/Coming%20soon%20Skool%20community%20sign%20ups', {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer patJRhV1gF9MOofz2.57a2ed61008eac8717c00d2a2015d84324ab861881f2a8b235ff4f057a075580',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ fields: { 'Full Name': name, 'Email': email } })
+        })
+        .then(function(res) {
+          if (res.ok) {
+            notifyForm.style.display = 'none';
+            modalMsg.textContent = "You're on the list. I'll reach out personally.";
+            modalMsg.className = 'modal-msg success';
+            modalMsg.style.display = 'block';
+          } else {
+            btn.textContent = 'Notify Me';
+            btn.disabled = false;
+            modalMsg.textContent = 'Something went wrong. Email me directly: connor@byransley.com';
+            modalMsg.className = 'modal-msg error';
+          }
+        })
+        .catch(function() {
+          btn.textContent = 'Notify Me';
+          btn.disabled = false;
+          modalMsg.textContent = 'Something went wrong. Email me directly: connor@byransley.com';
+          modalMsg.className = 'modal-msg error';
+        });
+      });
+      // ──────────────────────────────────────────────────────
+
+      var ham = document.getElementById('ham');
+      var mob = document.getElementById('mob-nav');
+      ham.addEventListener('click', function () {
+        ham.classList.toggle('open');
+        mob.classList.toggle('open');
+        document.body.style.overflow = mob.classList.contains('open') ? 'hidden' : '';
+      });
+      mob.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          ham.classList.remove('open');
+          mob.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
